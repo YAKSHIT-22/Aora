@@ -1,3 +1,4 @@
+import { GlobalProvider } from '@/context/GlobalProvider';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -34,6 +35,7 @@ export default function RootLayout() {
   }
 
   return (
+    <GlobalProvider>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
@@ -41,5 +43,6 @@ export default function RootLayout() {
         {/* <Stack.Screen name="/search/[query]" options={{ headerShown: false }} /> */}
         <Stack.Screen name="+not-found" />
       </Stack>
+    </GlobalProvider>
   );
 }
