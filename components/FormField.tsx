@@ -7,7 +7,7 @@ interface FormFieldProps {
   handleChange: (e: any) => void;
   placeholder: string;
   otherStyles: string;
-  keyboardType: string;
+  keyboardType?: string;
 }
 const FormField = ({
   title,
